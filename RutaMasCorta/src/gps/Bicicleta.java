@@ -19,12 +19,9 @@ public class Bicicleta {
         int sum2 = 0;
         int sum3 = 0;
         
-        for(int i=0; i<camino1.length; i++)
-        {
-            sum1 += camino1[i];
-            sum2 += camino2[i];
-            sum3 += camino3[i];
-        }
+        sum1 = Bicicleta.sumar(camino1);
+        sum2 = Bicicleta.sumar(camino2);
+        sum3 = Bicicleta.sumar(camino3);
         
         if(sum1 < sum2 && sum1 < sum3)
         {
@@ -49,6 +46,14 @@ public class Bicicleta {
             }
         }
         
+    }
+    public static int sumar(int [] suma) {
+    	int sumado = 0;
+    	for (int i=0; i<suma.length; i++)
+    	{
+    		sumado += suma[i]; 
+    	}
+		return sumado;
     }
 
     public static void main(String[] args) {
